@@ -1,0 +1,50 @@
+body {
+  font-family: 'Georgia', serif;
+  background-color: #111;
+  color: #eee;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#container {
+  max-width: 600px;
+  background-color: #222;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #e3c565;
+}
+
+#texto {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+#opcoes button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+#opcoes button:hover {
+  background-color: #666;
+}
