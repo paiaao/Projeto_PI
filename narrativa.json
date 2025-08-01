@@ -1,0 +1,200 @@
+{
+  "inicio": {
+    "texto": "Você desperta em um quarto desconhecido, iluminado apenas por uma lâmpada pendente que oscila com o vento. Na parede, há um bilhete pregado com a palavra: 'ESCOLHA'.",
+    "opcoes": [
+      { "texto": "Ler o bilhete", "destino": "bilhete" },
+      { "texto": "Ignorar e sair pela porta", "destino": "porta" }
+    ]
+  },
+
+  "bilhete": {
+    "texto": "O bilhete está escrito em uma caligrafia antiga: 'A cidade guarda segredos para quem ousa permanecer.'",
+    "opcoes": [
+      { "texto": "Guardar o bilhete e sair pela porta", "destino": "porta" },
+      { "texto": "Rasgar o bilhete", "destino": "espelho" }
+    ]
+  },
+
+  "porta": {
+    "texto": "Você sai para um corredor escuro. Ao fundo, há uma escada descendente e uma porta semiaberta com luz vermelha vazando por baixo.",
+    "opcoes": [
+      { "texto": "Descer as escadas", "destino": "escada" },
+      { "texto": "Entrar na porta vermelha", "destino": "sala_vermelha" }
+    ]
+  },
+
+  "espelho": {
+    "texto": "Ao rasgar o bilhete, um espelho na parede começa a embaçar sozinho. Nele aparece uma mensagem: 'Você está sendo observado'.",
+    "opcoes": [
+      { "texto": "Cobrir o espelho com um lençol", "destino": "porta" },
+      { "texto": "Encarar o espelho", "destino": "visao" }
+    ]
+  },
+
+  "visao": {
+    "texto": "A imagem do espelho distorce. Você vê uma cidade em ruínas, com torres góticas e criaturas nas sombras. Seu reflexo sorri sozinho.",
+    "opcoes": [
+      { "texto": "Tocar o espelho", "destino": "torre" },
+      { "texto": "Correr para fora do quarto", "destino": "porta" }
+    ]
+  },
+
+  "escada": {
+    "texto": "As escadas descem por vários andares. Cada degrau range como se não fosse usado há séculos. No térreo, uma biblioteca abandonada se revela.",
+    "opcoes": [
+      { "texto": "Investigar os livros", "destino": "biblioteca" },
+      { "texto": "Seguir para a porta nos fundos", "destino": "jardim" }
+    ]
+  },
+
+  "sala_vermelha": {
+    "texto": "A sala vermelha pulsa como se tivesse vida própria. No centro, uma mulher encapuzada observa uma esfera brilhante.",
+    "opcoes": [
+      { "texto": "Falar com a mulher", "destino": "profecia" },
+      { "texto": "Pegar a esfera e sair correndo", "destino": "maldição" }
+    ]
+  },
+
+  "torre": {
+    "texto": "Ao tocar o espelho, você é transportado para o topo de uma torre. A cidade inteira se revela ao redor, com trilhas de fumaça e sinos ao longe.",
+    "opcoes": [
+      { "texto": "Descer a torre", "destino": "mercado" },
+      { "texto": "Permanecer e observar", "destino": "sentinela" }
+    ]
+  },
+
+  "biblioteca": {
+    "texto": "Os livros são escritos em idiomas que você não conhece. Um deles, ao ser aberto, revela uma carta endereçada a você.",
+    "opcoes": [
+      { "texto": "Ler a carta", "destino": "carta" },
+      { "texto": "Ignorar e seguir", "destino": "jardim" }
+    ]
+  },
+
+  "jardim": {
+    "texto": "Um jardim murado, tomado por neblina, se estende à sua frente. Estátuas antigas observam você de forma incômoda.",
+    "opcoes": [
+      { "texto": "Explorar o jardim", "destino": "estatua" },
+      { "texto": "Subir no muro", "destino": "rua_externa" }
+    ]
+  },
+
+  "profecia": {
+    "texto": "A mulher diz: 'Você é a semente de um novo ciclo. A cidade está acordando com você.' Ela desaparece em fumaça.",
+    "opcoes": [
+      { "texto": "Pegar a esfera com cuidado", "destino": "fardo" },
+      { "texto": "Sair da sala", "destino": "jardim" }
+    ]
+  },
+
+  "maldição": {
+    "texto": "Ao tocar a esfera sem permissão, uma dor lancinante invade sua mente. Ecos de vozes antigas sussurram eternamente.",
+    "opcoes": [
+      { "texto": "Tentar resistir", "destino": "fim_maldicao" }
+    ]
+  },
+
+  "fardo": {
+    "texto": "A esfera pulsa em sua mão. Agora você sente tudo o que a cidade sente. Você se tornou parte dela.",
+    "opcoes": [
+      { "texto": "Aceitar o fardo", "destino": "fim_guardiao" },
+      { "texto": "Tentar se livrar da esfera", "destino": "maldição" }
+    ]
+  },
+
+  "estatua": {
+    "texto": "Uma das estátuas se move sutilmente quando você não está olhando. Um sussurro chama seu nome.",
+    "opcoes": [
+      { "texto": "Responde ao chamado", "destino": "santuário" },
+      { "texto": "Correr de volta", "destino": "jardim" }
+    ]
+  },
+
+  "rua_externa": {
+    "texto": "Atravessando o muro, você encontra uma rua deserta com postes quebrados. Ao longe, ouve-se um sino.",
+    "opcoes": [
+      { "texto": "Seguir o som do sino", "destino": "igreja" },
+      { "texto": "Entrar em um beco", "destino": "mercado" }
+    ]
+  },
+
+  "carta": {
+    "texto": "A carta diz: 'A cidade te escolheu. Cada escolha sua molda o despertar dela.' Ela termina com sua assinatura.",
+    "opcoes": [
+      { "texto": "Guardar a carta", "destino": "jardim" }
+    ]
+  },
+
+  "mercado": {
+    "texto": "Um mercado subterrâneo se abre diante de você. Criaturas encapuzadas vendem itens que parecem vivos.",
+    "opcoes": [
+      { "texto": "Fazer uma troca", "destino": "troca" },
+      { "texto": "Sair discretamente", "destino": "rua_externa" }
+    ]
+  },
+
+  "sentinela": {
+    "texto": "Você observa a cidade até perceber que não está mais sozinho. Algo está com você na torre.",
+    "opcoes": [
+      { "texto": "Virar e encarar", "destino": "fim_sentinela" }
+    ]
+  },
+
+  "santuário": {
+    "texto": "Uma passagem se abre sob os pés da estátua. Um santuário subterrâneo com velas acesas o aguarda.",
+    "opcoes": [
+      { "texto": "Entrar e aceitar o ritual", "destino": "fim_guardiao" },
+      { "texto": "Recusar e fugir", "destino": "rua_externa" }
+    ]
+  },
+
+  "igreja": {
+    "texto": "Uma igreja abandonada com vitrais quebrados se ergue. No altar, um livro aberto em seu nome.",
+    "opcoes": [
+      { "texto": "Ler o livro", "destino": "fim_profecia" }
+    ]
+  },
+
+  "troca": {
+    "texto": "Você entrega algo que não sabia que possuía. Em troca, recebe um nome novo. A cidade o reconhece.",
+    "opcoes": [
+      { "texto": "Aceitar o novo nome", "destino": "fim_reinicio" }
+    ]
+  },
+
+  "fim_maldicao": {
+    "texto": "A dor nunca passa. Você se torna mais uma voz entre tantas na cidade adormecida.",
+    "opcoes": [
+      { "texto": "Recomeçar", "destino": "inicio" }
+    ]
+  },
+
+  "fim_guardiao": {
+    "texto": "Você agora guarda os portões da Cidade Sombria. Ela vive através de você.",
+    "opcoes": [
+      { "texto": "Recomeçar", "destino": "inicio" }
+    ]
+  },
+
+  "fim_sentinela": {
+    "texto": "O ser o envolve e você se torna parte da vigia eterna. Seus olhos jamais se fecham novamente.",
+    "opcoes": [
+      { "texto": "Recomeçar", "destino": "inicio" }
+    ]
+  },
+
+  "fim_profecia": {
+    "texto": "Cada linha do livro conta seu futuro, seu passado e tudo que você não viveu. O ciclo se fecha.",
+    "opcoes": [
+      { "texto": "Recomeçar", "destino": "inicio" }
+    ]
+  },
+
+  "fim_reinicio": {
+    "texto": "Com um novo nome, você caminha pelas ruas como se sempre pertencesse ali. A cidade o aceita.",
+    "opcoes": [
+      { "texto": "Recomeçar", "destino": "inicio" }
+    ]
+  }
+}
+
