@@ -1,3 +1,30 @@
 História do RPG de texto
 
+Você desperta em um lugar escuro, com muita dor de cabeça, desnorteado.
+Ao recobrar seus sentidos percebe que está em um quarto, iluminado apenas por uma lamparina em cima de uma cômoda.
+Você não lembra seu nome ou como chegou aqui, mas sente uma vontade abstrusa de que não deveria estar aqui.
+
+OP1: Tentar se lembrar de alguma coisa
+    
+    R1: Você tenta lembrar de mais alguma coisa você, mas não consegue. Então tenta lembrar sobre como você chegou aqui, mas não consegue.
+    Mãe, pai, irmãos ou irmãs, amigos, conhecidos... Nada.
+    No momento atual, é como se você não tivesse nem mesmo um rosto.
+
+    Isso te deixa em desespero.
+
+    OPx:
+
+OP2: Procurar uma forma de sair dali imediatamente
+
+    Tendo a única
+    começa a analizar o quarto e percebe algumas coisas, como um papel próxima a lamparina, o fato de que a janela do quarto está travada
+
+OP3: Analizar o lugar para avaliar as suas opções
+
+
+
+
+OP1: Ler bilhete
+
+OP2: Sair do quarto pela porta
 
