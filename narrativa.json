@@ -2,7 +2,7 @@
   "inicio": {
     "texto": "Você desperta em um quarto desconhecido, iluminado apenas por uma lâmpada pendente que oscila com o vento. Na parede, há um bilhete pregado com a palavra: 'ESCOLHA'.",
     "opcoes": [
-      { "texto": "Ler o bilhete", "destino": "bilhete", "bonus": { "inteligencia": 1 } },
+      { "texto": "Ler o bilhete", "destino": "bilhete", "bonus": { "inteligencia": 1 }, "itens": ["Bilhete misterioso"] },
       { "texto": "Ignorar e sair pela porta", "destino": "porta", "bonus": { "observacao": 1 } },
       { "texto": "Vasculhar o quarto", "destino": "vasculhar_quarto", "bonus": { "observacao": 1 } }
     ]
@@ -11,15 +11,15 @@
   "vasculhar_quarto": {
     "texto": "Você encontra uma chave enferrujada e um diário antigo sob a cama. O diário está trancado.",
     "opcoes": [
-      { "texto": "Tentar abrir o diário com a chave", "destino": "diario", "requisitos": { "inteligencia": 1 } },
-      { "texto": "Guardar os itens e sair pela porta", "destino": "porta", "bonus": { "observacao": 1 } }
+      { "texto": "Tentar abrir o diário com a chave", "destino": "diario", "requisitos": { "inteligencia": 1 }, "itens": ["Diário antigo"] },
+      { "texto": "Guardar os itens e sair pela porta", "destino": "porta", "bonus": { "observacao": 1 }, "itens": ["Chave enferrujada"] }
     ]
   },
 
   "diario": {
     "texto": "O diário revela anotações sobre rituais e segredos da cidade. Você aprende sobre criaturas que habitam as sombras.",
     "opcoes": [
-      { "texto": "Estudar os rituais", "destino": "ritual", "bonus": { "inteligencia": 2 } },
+      { "texto": "Estudar os rituais", "destino": "ritual", "bonus": { "inteligencia": 2 }, "itens": ["Página de ritual"] },
       { "texto": "Ignorar e sair pela porta", "destino": "porta" }
     ]
   },
@@ -59,7 +59,7 @@
   "porta_trancada": {
     "texto": "A porta se abre para uma sala secreta cheia de símbolos. Um artefato brilha no centro.",
     "opcoes": [
-      { "texto": "Pegar o artefato", "destino": "artefato", "bonus": { "inteligencia": 1, "observacao": 1 } },
+      { "texto": "Pegar o artefato", "destino": "artefato", "bonus": { "inteligencia": 1, "observacao": 1 }, "itens": ["Artefato brilhante"] },
       { "texto": "Voltar ao corredor", "destino": "corredor" }
     ]
   },
@@ -180,7 +180,7 @@
   "casas_abandonadas": {
     "texto": "Dentro de uma casa, você encontra suprimentos e um mapa da cidade. Isso pode ajudar em sua jornada.",
     "opcoes": [
-      { "texto": "Estudar o mapa", "destino": "mapa", "bonus": { "inteligencia": 1 } },
+      { "texto": "Estudar o mapa", "destino": "mapa", "bonus": { "inteligencia": 1 }, "itens": ["Mapa da cidade"] },
       { "texto": "Voltar para a rua", "destino": "rua_externa" }
     ]
   },
@@ -234,7 +234,7 @@
   "sacristia": {
     "texto": "Na sacristia, você encontra uma relíquia sagrada. Ela aumenta sua força interior.",
     "opcoes": [
-      { "texto": "Usar a relíquia", "destino": "fim_guardiao", "bonus": { "combate": 2 } },
+      { "texto": "Usar a relíquia", "destino": "fim_guardiao", "bonus": { "combate": 2 }, "itens": ["Relíquia sagrada"] },
       { "texto": "Voltar ao altar", "destino": "igreja" }
     ]
   },

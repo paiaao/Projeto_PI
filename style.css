@@ -12,23 +12,36 @@ body {
 }
 
 #layout {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 900px 1fr;
+  max-width: 1600px;
   width: 100%;
-  margin: 20px;
-  gap: 40px;
+  margin: 20px auto 0 auto;
+  align-items: flex-start;
+}
+
+#painel-inventario { /* nao pode mexer */
+  grid-column: 1;
+  align-self: start;
+  margin-left: 32px; 
 }
 
 #jogo {
-  flex: 1;
-  max-width: 950px;
+  grid-column: 2;
+  min-width: 0;
+  max-width: 900px;
   background-color: #222;
-  padding: 30px;
+  padding: 40px 50px;
   border-radius: 10px;
   box-shadow: 0 0 10px #000;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#painel-habilidades { /* nao pode mexer */
+  grid-column: 3;
+  align-self: start;
+  margin-right: 32px; 
 }
 
 h1 {
@@ -86,7 +99,7 @@ h1 {
 }
 
 #painel-habilidades p {
-  margin: 8px 0;
+  margin: 8px 0
 }
 
 #painel-inventario {
