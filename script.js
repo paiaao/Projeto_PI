@@ -5,6 +5,7 @@ let habilidades = {
   observacao: 0,
   agilidade: 0
 };
+let inventario = [];
 
 function escolher(destino) {
   const estado = narrativa[destino];
@@ -17,6 +18,7 @@ function escolher(destino) {
   estado.opcoes.forEach(op => {
     const requisitos = op.requisitos || {};
     const bonus = op.bonus || {};
+    const itens = op.itens || [];
     const podeEscolher = Object.keys(requisitos).every(skill => habilidades[skill] >= requisitos[skill]);
 
     // Construir a legenda de requisitos, se houver
@@ -40,6 +42,12 @@ function escolher(destino) {
           habilidades[skill] += bonus[skill];
         }
       }
+      // adicionar itens ao inventário
+      itens.forEach(item => {
+        if (!inventario.includes(item)) {
+          inventario.push(item);
+        }
+      });
       escolher(op.destino);
     };
 
@@ -47,11 +55,28 @@ function escolher(destino) {
   });
 
   atualizarPainelHabilidades();
+  atualizarPainelInventario();
 }
 
 function atualizarPainelHabilidades() {
   for (let skill in habilidades) {
     document.getElementById(skill).textContent = habilidades[skill];
+  }
+}
+
+function atualizarPainelInventario() {
+  const lista = document.getElementById("inventario-lista");
+  lista.innerHTML = "";
+  if (inventario.length === 0) {
+    const vazio = document.createElement("li");
+    vazio.textContent = "Vazio";
+    lista.appendChild(vazio);
+  } else {
+    inventario.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      lista.appendChild(li);
+    });
   }
 }
 

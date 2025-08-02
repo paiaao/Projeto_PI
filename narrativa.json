@@ -3,7 +3,31 @@
     "texto": "Você desperta em um quarto desconhecido, iluminado apenas por uma lâmpada pendente que oscila com o vento. Na parede, há um bilhete pregado com a palavra: 'ESCOLHA'.",
     "opcoes": [
       { "texto": "Ler o bilhete", "destino": "bilhete", "bonus": { "inteligencia": 1 } },
-      { "texto": "Ignorar e sair pela porta", "destino": "porta", "bonus": { "observacao": 1 } }
+      { "texto": "Ignorar e sair pela porta", "destino": "porta", "bonus": { "observacao": 1 } },
+      { "texto": "Vasculhar o quarto", "destino": "vasculhar_quarto", "bonus": { "observacao": 1 } }
+    ]
+  },
+
+  "vasculhar_quarto": {
+    "texto": "Você encontra uma chave enferrujada e um diário antigo sob a cama. O diário está trancado.",
+    "opcoes": [
+      { "texto": "Tentar abrir o diário com a chave", "destino": "diario", "requisitos": { "inteligencia": 1 } },
+      { "texto": "Guardar os itens e sair pela porta", "destino": "porta", "bonus": { "observacao": 1 } }
+    ]
+  },
+
+  "diario": {
+    "texto": "O diário revela anotações sobre rituais e segredos da cidade. Você aprende sobre criaturas que habitam as sombras.",
+    "opcoes": [
+      { "texto": "Estudar os rituais", "destino": "ritual", "bonus": { "inteligencia": 2 } },
+      { "texto": "Ignorar e sair pela porta", "destino": "porta" }
+    ]
+  },
+
+  "ritual": {
+    "texto": "Você realiza um pequeno ritual de proteção. Sente-se mais atento e preparado para o que está por vir.",
+    "opcoes": [
+      { "texto": "Sair pela porta", "destino": "porta", "bonus": { "observacao": 2 } }
     ]
   },
 
@@ -19,7 +43,31 @@
     "texto": "Você sai para um corredor escuro. Ao fundo, há uma escada descendente e uma porta semiaberta com luz vermelha vazando por baixo.",
     "opcoes": [
       { "texto": "Descer as escadas", "destino": "escada", "requisitos": { "observacao": 1 }, "bonus": { "inteligencia": 1 } },
-      { "texto": "Entrar na porta vermelha", "destino": "sala_vermelha", "requisitos": { "inteligencia": 2 } }
+      { "texto": "Entrar na porta vermelha", "destino": "sala_vermelha", "requisitos": { "inteligencia": 2 } },
+      { "texto": "Explorar o corredor", "destino": "corredor", "bonus": { "observacao": 1 } }
+    ]
+  },
+
+  "corredor": {
+    "texto": "No corredor, você encontra uma porta trancada e uma janela quebrada. O vento traz sussurros.",
+    "opcoes": [
+      { "texto": "Tentar abrir a porta trancada", "destino": "porta_trancada", "requisitos": { "inteligencia": 2 } },
+      { "texto": "Sair pela janela", "destino": "rua_externa", "bonus": { "agilidade": 1 } }
+    ]
+  },
+
+  "porta_trancada": {
+    "texto": "A porta se abre para uma sala secreta cheia de símbolos. Um artefato brilha no centro.",
+    "opcoes": [
+      { "texto": "Pegar o artefato", "destino": "artefato", "bonus": { "inteligencia": 1, "observacao": 1 } },
+      { "texto": "Voltar ao corredor", "destino": "corredor" }
+    ]
+  },
+
+  "artefato": {
+    "texto": "Ao tocar o artefato, você sente uma energia percorrer seu corpo. Suas habilidades aumentam.",
+    "opcoes": [
+      { "texto": "Sair pela janela", "destino": "rua_externa", "bonus": { "combate": 1, "agilidade": 1 } }
     ]
   },
 
@@ -75,7 +123,16 @@
     "texto": "Um jardim murado, tomado por neblina, se estende à sua frente. Estátuas antigas observam você de forma incômoda.",
     "opcoes": [
       { "texto": "Explorar o jardim", "destino": "estatua", "requisitos": { "observacao": 2 } },
-      { "texto": "Subir no muro", "destino": "rua_externa", "bonus": { "agilidade": 1 } }
+      { "texto": "Subir no muro", "destino": "rua_externa", "bonus": { "agilidade": 1 } },
+      { "texto": "Procurar por passagens secretas", "destino": "passagem_secreta", "requisitos": { "inteligencia": 2 } }
+    ]
+  },
+
+  "passagem_secreta": {
+    "texto": "Você encontra uma passagem oculta entre as raízes de uma árvore. Ela leva a um santuário subterrâneo.",
+    "opcoes": [
+      { "texto": "Entrar no santuário", "destino": "santuário", "bonus": { "inteligencia": 1 } },
+      { "texto": "Voltar ao jardim", "destino": "jardim" }
     ]
   },
 
@@ -90,7 +147,8 @@
   "maldição": {
     "texto": "Ao tocar a esfera sem permissão, uma dor lancinante invade sua mente. Ecos de vozes antigas sussurram eternamente.",
     "opcoes": [
-      { "texto": "Tentar resistir", "destino": "fim_maldicao", "bonus": { "combate": 1 } }
+      { "texto": "Tentar resistir", "destino": "fim_maldicao", "bonus": { "combate": 1 } },
+      { "texto": "Deixar a esfera", "destino": "sala_vermelha" }
     ]
   },
 
@@ -114,7 +172,24 @@
     "texto": "Atravessando o muro, você encontra uma rua deserta com postes quebrados. Ao longe, ouve-se um sino.",
     "opcoes": [
       { "texto": "Seguir o som do sino", "destino": "igreja" },
-      { "texto": "Entrar em um beco", "destino": "mercado" }
+      { "texto": "Entrar em um beco", "destino": "mercado" },
+      { "texto": "Explorar as casas abandonadas", "destino": "casas_abandonadas", "bonus": { "observacao": 1 } }
+    ]
+  },
+
+  "casas_abandonadas": {
+    "texto": "Dentro de uma casa, você encontra suprimentos e um mapa da cidade. Isso pode ajudar em sua jornada.",
+    "opcoes": [
+      { "texto": "Estudar o mapa", "destino": "mapa", "bonus": { "inteligencia": 1 } },
+      { "texto": "Voltar para a rua", "destino": "rua_externa" }
+    ]
+  },
+
+  "mapa": {
+    "texto": "O mapa revela atalhos e áreas perigosas. Você se sente mais preparado para explorar.",
+    "opcoes": [
+      { "texto": "Seguir para o mercado", "destino": "mercado", "bonus": { "agilidade": 1 } },
+      { "texto": "Ir para a igreja", "destino": "igreja", "bonus": { "inteligencia": 1 } }
     ]
   },
 
@@ -151,7 +226,16 @@
   "igreja": {
     "texto": "Uma igreja abandonada com vitrais quebrados se ergue. No altar, um livro aberto em seu nome.",
     "opcoes": [
-      { "texto": "Ler o livro", "destino": "fim_profecia", "requisitos": { "inteligencia": 4 } }
+      { "texto": "Ler o livro", "destino": "fim_profecia", "requisitos": { "inteligencia": 4 } },
+      { "texto": "Explorar a sacristia", "destino": "sacristia", "bonus": { "observacao": 1 } }
+    ]
+  },
+
+  "sacristia": {
+    "texto": "Na sacristia, você encontra uma relíquia sagrada. Ela aumenta sua força interior.",
+    "opcoes": [
+      { "texto": "Usar a relíquia", "destino": "fim_guardiao", "bonus": { "combate": 2 } },
+      { "texto": "Voltar ao altar", "destino": "igreja" }
     ]
   },
 
